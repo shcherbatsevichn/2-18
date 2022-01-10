@@ -10,10 +10,10 @@ $a = count_diff_elem($A);
 echo("В массиве А(N) {$a} различных элементов");
 
 function count_diff_elem($array){
-    $countres = 0;
+    $countres = 1;
     sort($array);
     for($i = 0; $i < count($array); $i++){
-        if($array[$i] != $array[$i+1]){
+        if($array[$i] != $array[$i+1] && $i+1 < count($array)){
             $countres++;
         }
     }
